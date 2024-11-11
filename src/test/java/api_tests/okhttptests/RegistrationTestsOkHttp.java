@@ -17,7 +17,7 @@ public class RegistrationTestsOkHttp implements Base_Api {
 
     SoftAssert softAssert = new SoftAssert();
 
-    @Test
+    @Test(groups = {"smoke"})
     public void registrationPositiveTest() {
         int i = new Random().nextInt(1000) + 1000;
         RegistrationBodyDto bodyDto = RegistrationBodyDto
