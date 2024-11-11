@@ -20,7 +20,7 @@ public class DeleteCarByIdTestsOkHttp implements Base_Api {
 
     @BeforeClass(alwaysRun = true)
     public void login() {
-        RegistrationBodyDto bodyDto = RegistrationBodyDto
+        UserDto bodyDto = UserDto
                 .builder()
                 .username("vv17@gmail.com")
                 .password("QWErty123!!!")
