@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e48866-d1ee-43bf-ad57-17b349ead128" name="Changes" comment="Registration mobile tests added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/screens/ErrorScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/screens/LoginScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/screens/MyCarsScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewCarTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LoginTests.java" afterDir="false" />
+    <list default="true" id="94e48866-d1ee-43bf-ad57-17b349ead128" name="Changes" comment="???">
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/AddNewCarScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/RegistrationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/RegistrationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/SearchScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/SearchScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/RegistrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/MyCarsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/MyCarsScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewCarTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewCarTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,12 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1731349385563</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="???">
+      <option name="closed" value="true" />
+      <created>1731945352191</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731945352191</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration mobile tests added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration mobile tests added" />
+    <MESSAGE value="???" />
+    <option name="LAST_COMMIT_MESSAGE" value="???" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

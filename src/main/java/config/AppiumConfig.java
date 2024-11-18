@@ -32,7 +32,7 @@ public class AppiumConfig {
 
     @AfterMethod
     public void tearDown() {
-        driver.quit();
+        // driver.quit();
     }
 
 
