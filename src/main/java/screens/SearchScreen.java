@@ -21,6 +21,9 @@ public class SearchScreen  extends BaseScreen{
     @FindBy(xpath = "//hierarchy/android.widget.Toast")
     AndroidElement popUpMessageSuccess;
 
+    @FindBy(xpath = "//*[@resource-id='com.telran.ilcarro:id/title']")
+    AndroidElement btnMyCars;
+
     public SearchScreen clickBtnDots() {
         pause(3000);
         btnDots.click();
@@ -33,11 +36,19 @@ public class SearchScreen  extends BaseScreen{
         return new RegistrationScreen(driver);
     }
 
-    public boolean isElementPresent_PopUpMessageSuccess(String text) {
+    public LoginScreen clickBtnLogin() {
+        //pause(3000);
+        btnLogin.click();
+        return new LoginScreen(driver);
+    }
 
+    public boolean isElementPresent_PopUpMessageSuccess(String text) {
         return isTextInElementPresent(popUpMessageSuccess, text, 5000);
     }
 
-
+    public MyCarsScreen clickBtnMyCars() {
+        btnMyCars.click();
+        return new MyCarsScreen(driver);
+    }
 
 }

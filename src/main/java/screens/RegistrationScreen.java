@@ -29,9 +29,6 @@ public class RegistrationScreen extends BaseScreen {
     @FindBy(id = "com.telran.ilcarro:id/regBtn")
     AndroidElement btnYalla;
 
-
-
-
     public RegistrationScreen fillRegistrationForm(UserDto user) {
         firstNameField.sendKeys(user.getFirstName());
         lastNameField.sendKeys(user.getLastName());
@@ -48,5 +45,10 @@ public class RegistrationScreen extends BaseScreen {
     public SearchScreen clickBtnYallaPositive() {
         btnYalla.click();
         return new SearchScreen(driver);
+    }
+
+    public ErrorScreen clickBtnYallaNegative() {
+        btnYalla.click();
+        return new ErrorScreen(driver);
     }
 }

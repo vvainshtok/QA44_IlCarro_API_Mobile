@@ -11,17 +11,15 @@ import java.util.Random;
 
 public class RegistrationTests extends AppiumConfig {
 
-    int i = new Random().nextInt(1000)+ 1000;
-    UserDto user =  UserDto.builder()
-        .username("john" + i + "@gmail.com")
-        .password("John123456!")
-        .firstName("John")
-        .lastName("Smith")
-        .build();
-
-
     @Test
     public void registrationPositiveTest() {
+        int i = new Random().nextInt(1000)+ 1000;
+        UserDto user =  UserDto.builder()
+                .username("john" + i + "@gmail.com")
+                .password("John123456!")
+                .firstName("John")
+                .lastName("Smith")
+                .build();
         Assert.assertTrue(new SplashScreen(driver)
                 .goToSearchScreen()
                 .clickBtnDots()
@@ -30,5 +28,61 @@ public class RegistrationTests extends AppiumConfig {
                 .clickCheckBox()
                 .clickBtnYallaPositive()
                 .isElementPresent_PopUpMessageSuccess("Registration success!"));
+    }
+
+    @Test
+    public void registrationNegativeTest_emptyLastName() {
+        int i = new Random().nextInt(1000)+ 1000;
+        UserDto user =  UserDto.builder()
+                .username("john" + i + "@gmail.com")
+                .password("John123456!")
+                .firstName("John")
+                .lastName(" ")
+                .build();
+        Assert.assertTrue(new SplashScreen(driver)
+                .goToSearchScreen()
+                .clickBtnDots()
+                .clickBtnRegistration()
+                .fillRegistrationForm(user)
+                .clickCheckBox()
+                .clickBtnYallaNegative()
+                .validateErrorMessage("All fields must be filled and agree terms"));
+    }
+
+    @Test
+    public void registrationNegativeTest_withoutCheckBox() {
+        int i = new Random().nextInt(1000)+ 1000;
+        UserDto user =  UserDto.builder()
+                .username("john" + i + "@gmail.com")
+                .password("John123456!")
+                .firstName("John")
+                .lastName("Smith")
+                .build();
+        Assert.assertTrue(new SplashScreen(driver)
+                .goToSearchScreen()
+                .clickBtnDots()
+                .clickBtnRegistration()
+                .fillRegistrationForm(user)
+                .clickBtnYallaNegative()
+                .validateErrorMessage("All fields must be filled and agree terms"));
+    }
+
+    @Test
+    public void registrationNegativeTest_wrongEmail() {
+        int i = new Random().nextInt(1000)+ 1000;
+        UserDto user =  UserDto.builder()
+                .username("john" + i + "gmail.com")
+                .password("John123456!")
+                .firstName("John")
+                .lastName("Smith")
+                .build();
+        Assert.assertTrue(new SplashScreen(driver)
+                .goToSearchScreen()
+                .clickBtnDots()
+                .clickBtnRegistration()
+                .fillRegistrationForm(user)
+                .clickCheckBox()
+                .clickBtnYallaNegative()
+                .validateErrorMessage("must be a well-formed email address"));
     }
 }
